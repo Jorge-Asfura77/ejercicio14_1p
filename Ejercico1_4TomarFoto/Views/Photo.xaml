@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Convertidor="clr-namespace:Ejercico1_4TomarFoto.Converter"
+             x:Class="Ejercico1_4TomarFoto.Views.Photo"
+             BackgroundColor="White">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Convertidor:ByteArrayToImage x:Key="ByteToImage"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+            <Label Text="Nombre:" x:Name="lbNombre1" TextColor="Navy" FontSize="30" Margin="5"/>
+            <Label Text="{Binding nombre}" x:Name="lbNombre2" TextColor="Black" FontSize="12" Margin="5"/>
+            <Image x:Name="mostrarFoto " Source="{Binding foto, Converter={StaticResource ByteToImage}}" Margin="5"/>
+            <Label Text="Descripción:" x:Name="lbDescripcion1" TextColor="Navy" FontSize="30" Margin="5"/>
+            <Label Text="{Binding descripcion}" x:Name="lbDescripcion2" TextColor="Black" FontSize="12" Margin="5"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

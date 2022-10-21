@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercico1_4TomarFoto.MainPage">
+    <StackLayout BackgroundColor="White">
+        <Frame BackgroundColor="RoyalBlue" Padding="24" CornerRadius="0">
+            <Label Text="Guardar Fotografía" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        
+        <Image  x:Name="foto" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+
+        <Button Text="Tomar Foto" x:Name="btntomarFoto" Clicked="tomarFoto_Clicked" BackgroundColor="RoyalBlue" Margin="5"/>
+        <Label Text="Nombre:" TextColor="Navy" FontSize="14" Margin="5"/>
+        <Entry x:Name="txtNombre" Text="{Binding nombre}" TextColor="Navy" FontSize="16" Margin="5" HorizontalTextAlignment="Start" BackgroundColor="LightSteelBlue"/>
+        <Label Text="Descripcion:" TextColor="Navy" FontSize="14" Margin="5"/>
+        <Entry x:Name="txtDescripcion" Text="{Binding descripcion}" TextColor="Navy" FontSize="16" Margin="5" HorizontalTextAlignment="Start" BackgroundColor="LightSteelBlue"/>
+        <Button Text="Guardar fOTO" x:Name="btnGuardar" Clicked="btnGuardar_Clicked" BackgroundColor="RoyalBlue" Margin="5"/>
+        <Button Text="vER Fotos" x:Name="btnListar" Clicked="btnListar_Clicked" BackgroundColor="RoyalBlue" Margin="5"/>
+
+    </StackLayout>
+
+</ContentPage>
