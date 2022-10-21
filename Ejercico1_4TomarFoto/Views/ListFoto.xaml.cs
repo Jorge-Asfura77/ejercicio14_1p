@@ -31,8 +31,8 @@ namespace Ejercico1_4TomarFoto.Views
 
         protected async override void OnAppearing()
         {
-            base.OnAppearing();//recargara de nuevo la lista
-            ListaFoto.ItemsSource = await App.DBase.getListFoto();//Espera coleccion de elementos para enumerar en la forma que queramos
+            base.OnAppearing();
+            ListaFoto.ItemsSource = await App.DBase.getListFoto();
         }
 
         private async void mRegistro_Clicked(object sender, EventArgs e)
